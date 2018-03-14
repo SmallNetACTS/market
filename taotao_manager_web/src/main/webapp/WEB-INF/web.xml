@@ -38,4 +38,8 @@
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
 
+  <welcome-file-list>
+    <welcome-file>rest/page/index</welcome-file>
+  </welcome-file-list>
+
 </web-app>

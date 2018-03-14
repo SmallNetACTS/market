@@ -26,4 +26,9 @@
      ref="testServiceImpl" />
     <dubbo:service interface="com.taotao.manager.service.ItemCatService"
      ref="itemCatServiceImpl" />
+    <dubbo:service interface="com.taotao.manager.service.ItemDescService"
+     ref="itemDescServiceImpl" />
+    <dubbo:service interface="com.taotao.manager.service.ItemService"
+     ref="itemServiceImpl" />
+
 </beans>

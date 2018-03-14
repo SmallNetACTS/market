@@ -9,8 +9,9 @@ import java.util.List;
  *date:2018-03-11 15:24
  *description:
  **/
-public interface ItemCatService {
+public interface ItemCatService extends BaseService<ItemCat>{
 
 List<ItemCat> queryItemcatByPage(Integer page,Integer rows);
+
 
 }

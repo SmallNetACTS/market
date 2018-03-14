@@ -27,7 +27,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <!--http://127.0.0.1:${port}/${path}-->
-                    <port>8080</port>
+                    <port>8180</port>
                     <path>/</path>
                 </configuration>
             </plugin>

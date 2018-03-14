@@ -26,6 +26,13 @@ public class ItemCat extends BasePojo {
     @Column(name = "is_parent")
     private Boolean isParent;
 
+    public String getText(){
+      return this.getName();
+    }
+    public String getState(){
+        return  isParent ? "closed" : "open" ;
+    }
+
     public Long getId() {
         return id;
     }

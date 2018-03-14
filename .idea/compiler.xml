@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="comlaowang_fastdfs" />
         <module name="comlaowang_mybatis" />
+        <module name="fastdfs_client" />
         <module name="taotao_common" />
         <module name="taotao_manager_interface" />
         <module name="taotao_manager_mapper" />
@@ -16,7 +18,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="comlaowang_fastdfs" target="1.7" />
       <module name="comlaowang_mybatis" target="1.7" />
+      <module name="fastdfs_client" target="1.5" />
       <module name="taotao_common" target="1.7" />
       <module name="taotao_manager" target="1.7" />
       <module name="taotao_manager_interface" target="1.7" />

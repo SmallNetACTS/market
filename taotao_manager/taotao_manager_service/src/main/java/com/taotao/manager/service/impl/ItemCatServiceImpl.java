@@ -15,16 +15,18 @@ import java.util.List;
  *description:
  **/
 @Service
-public class ItemCatServiceImpl implements ItemCatService {
-    @Autowired
+public class ItemCatServiceImpl extends BaseServiceImpl<ItemCat> implements ItemCatService {
+   @Autowired
     private ItemCatMapper itemCatMapper;
     @Override
     public List<ItemCat> queryItemcatByPage(Integer page, Integer rows) {
-
+        //设定分页
         PageHelper.startPage(page,rows);
 
         List<ItemCat> list = itemCatMapper.select(null);
 
         return list;
     }
+
+
 }

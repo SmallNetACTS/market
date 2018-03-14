@@ -4,9 +4,7 @@ import com.taotao.manager.ItemCat;
 import com.taotao.manager.service.ItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,11 +26,24 @@ public class ItemCatController {
     @RequestMapping("query/{page}")
     public List<ItemCat> queryItemCat(@PathVariable("page") Integer page,Integer rows ){
 
-        List<ItemCat> list = itemCatService.queryItemcatByPage(page, rows);
+//       List<ItemCat> list = itemCatService.queryItemcatByPage(page, rows);
+        List<ItemCat> itemCats = itemCatService.queryByPage(page, rows);
+        return itemCats;
 
-        return list;
+       /* url:'/rest/item/cat',
+                method:'GET',*/
 
     }
 
+       @ResponseBody
+       @RequestMapping(method = RequestMethod.GET)
+       public List<ItemCat> queryItemCatByParentId(@RequestParam(value = "id",defaultValue = "0") Long parentId){
+           ItemCat itemCat = new ItemCat();
+           itemCat.setParentId(parentId);
+           List<ItemCat> itemCats = itemCatService.queryListByWhere(itemCat);
+
+           return itemCats;
+
+        }
 
 }
