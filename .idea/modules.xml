@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../comlaowang_fastdfs/comlaowang_fastdfs.iml" filepath="$PROJECT_DIR$/../comlaowang_fastdfs/comlaowang_fastdfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/comlaowang_mybatis/comlaowang_mybatis.iml" filepath="$PROJECT_DIR$/comlaowang_mybatis/comlaowang_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/../fastdfs_client/fastdfs_client.iml" filepath="$PROJECT_DIR$/../fastdfs_client/fastdfs_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/taotao_common/taotao_common.iml" filepath="$PROJECT_DIR$/taotao_common/taotao_common.iml" />

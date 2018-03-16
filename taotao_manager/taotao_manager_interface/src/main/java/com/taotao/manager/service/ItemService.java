@@ -1,5 +1,6 @@
 package com.taotao.manager.service;
 
+import com.taotao.common.TaoResult;
 import com.taotao.manager.Item;
 
 /***
@@ -17,4 +18,5 @@ public interface ItemService extends BaseService<Item> {
      */
     public void saveItem(Item item, String desc);
 
+    TaoResult<Item> queryItemList(Integer page, Integer rows);
 }

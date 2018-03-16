@@ -1,11 +1,17 @@
 package com.taotao.manager.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.common.TaoResult;
 import com.taotao.manager.Item;
 import com.taotao.manager.ItemDesc;
 import com.taotao.manager.service.ItemDescService;
 import com.taotao.manager.service.ItemService;
+import org.apache.activemq.transport.stomp.FrameTranslator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /***
  *author:NetACTS
@@ -31,4 +37,18 @@ public class ItemServiceImpl extends BaseServiceImpl<Item> implements ItemServic
 
          this.itemDescService.save(itemDesc);
      }
+
+    @Override
+    public TaoResult<Item> queryItemList(Integer page, Integer rows) {
+        // 设置分页数据
+        PageHelper.startPage(page,rows);
+        List<Item> list = this.queryListByWhere(null);
+        // 获取分页的详细数据
+        PageInfo<Item> pageInfo = new PageInfo<>(list);
+        TaoResult<Item> itemTaoResult = new TaoResult<>();
+        itemTaoResult.setTotal(pageInfo.getTotal());
+        itemTaoResult.setRows(list);
+
+        return itemTaoResult;
+    }
 }

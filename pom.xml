@@ -10,7 +10,6 @@
     <module>taotao_common</module>
     <module>taotao_manager</module>
       <module>taotao_manager_web</module>
-      <module>../comlaowang_fastdfs</module>
   </modules>
 
   <!-- 集中定义依赖版本号 -->
