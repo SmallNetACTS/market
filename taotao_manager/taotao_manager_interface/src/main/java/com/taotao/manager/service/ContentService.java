@@ -12,4 +12,6 @@ import com.taotao.manager.Item;
 public interface ContentService extends BaseService <Content> {
 
     TaoResult<Content> queryConentByPage(Integer page, Integer rows, Long categoryId);
+
+    String queryAD(Long categoryId);
 }
